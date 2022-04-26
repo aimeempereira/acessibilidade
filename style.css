@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=League+Gothic&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,600&family=Poppins:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 2rem;
+  width: 100%;
+  height: 5%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+  box-shadow: 2px 6px 15px -1px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 5px;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  color: #225687;
+}
+
+header h1 {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+}
+
+header h1 .logo-serif {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 1rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li a {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  color: black;
+  border-radius: 30px;
+}
+
+ul li a:hover {
+  background-color: rgba(87, 203, 238, 0.335);
+  font-weight: 500;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.26);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+#site-search {
+  border: 1px solid rgba(0, 0, 0, 0.561);
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  border-radius: 30px;
+}
+
+.btn-search {
+  margin-left: 4px;
+  background-color: rgba(123, 240, 201, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: black;
+  color: white;
+
+  padding: 3px 4.5px;
+  border-radius: 50%;
+
+  transition: 0.5s;
+}
+
+/* Fim de header */
+
+.main-container {
+  width: 100vw;
+}
+
+.hero {
+  width: 100vw;
+  height: 30vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(37, 37, 37)),
+    url('https://images.unsplash.com/photo-1520645521318-f03a712f0e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
+      center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-text {
+  font-weight: 200;
+  max-width: 800px;
+  text-align: center;
+  opacity: 70%;
+}
+
+/* FIM do Hero */
+
+.main-content {
+  margin: 2rem 5rem;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb a {
+  color: #1d1d1d;
+  font-size: 16px;
+}
+
+.breadcrumb li:last-child {
+  font-weight: bold;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* LISTA DE CARDS */
+
+.hotel-list {
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hotel-list-item {
+  width: 25%;
+}
+
+.hotel-list-item-image {
+  width: fit-content;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  height: 10%;
+  padding: 2.5rem 0;
+  color: white;
+  background: #393b3b;
+  box-shadow: inset 0px 2px 10px -1px rgba(0, 0, 0, 0.192);
+  border-top: 1px solid black;
+}
+
+.text-footer {
+  font-size: smaller;
+}
+
+.btn__newsletter {
+  font-size: 0.9;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 7px 10px;
+
+  border: 1px solid black;
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.65);
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(123, 240, 201);
+}
+
+.btn__newsletter:hover {
+  background-color: rgb(216, 154, 245);
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.65);
+  transition: 0.5s;
+}
+
+/* ao tentar deixar responsivo em telas menores, o header fica menor do que o #main-container e não sei como resolver */
+
+@media only screen and (max-width: 805px) {
+  .nav-links,
+  .search {
+    visibility: hidden;
+  }
+
+  .hero {
+    padding: 2rem 5rem;
+  }
+
+  #main-container {
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+}
